@@ -1,7 +1,7 @@
 <head>
 <!-- Meta Pixel Code -->
 <script>
-    var __cbSdkHost = "https://capig350.abinaya.cbinternal.com/";
+    var __cbSdkHost = "https://d2p4yupv2omn75.cloudfront.net/";
     var __cbSdkSettings={'cbq':{destinations:[{name:"cloudbridge"},],
     "host":__cbSdkHost,"globalVar":"cbq",}};
     !function(a,h,e,v,n,t,s)
@@ -11,9 +11,9 @@
       n.queue=[];t=h.createElement(e);t.async=!0;
       t.src=v;s=h.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
-      "https://d1gv44z3s4icll.cloudfront.net/"+'sdk/capig-events.js');
-    cbq('init', "2251318144409330703");
-    cbq('loadConfig', "2251318144409330703");
+      "https://d2p4yupv2omn75.cloudfront.net/"+'sdk/capig-events.js');
+    cbq('init', "7534444405722971651");
+    cbq('loadConfig', "7534444405722971651");
     cbq('track', 'PageView');
     </script>
 <!-- End Meta Pixel Code -->
@@ -47,9 +47,12 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 }, false);
 
 document.getElementById('purchaseButton').addEventListener('click', function() {
-cbq('track', 'Purchase');
-   
+ cbq('track', 'Purchase', {
+    value: 100,
+    currency: 'USD',
+  });
 }, false);
+
 
 document.getElementById('subcribeButton').addEventListener('click', function() {
   cbq('track', 'Subscribe');
